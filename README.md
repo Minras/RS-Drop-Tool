@@ -22,3 +22,7 @@ Donate
 ============
 	Donations are highly appretiated. I put a lot of work into making this work for you so dont be scared to drop anything by as a gift ;)
 Email : zackdavidson2014@outlook.com
+
+DB schema
+============
+https://www.dbdesigner.net/designer/schema/219447
