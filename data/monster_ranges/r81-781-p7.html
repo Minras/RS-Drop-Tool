@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Runescape Monster Database - Old School RuneScape Help</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="/css/bluelight.css" rel="stylesheet" type="text/css" id="ourstylesheet" />
+<link href="/css/global_new.css" rel="stylesheet" type="text/css" />
+
+<meta http-equiv="Content-Type" content="text/html; />
+<meta name=" DESCRIPTION" content="Runescape monster database containing all Runescape monsters with tactics on how to defeat them, in-page experience calculators, drops, locations, and more!" />
+<meta name="KEYWORDS" content="Runescape, 2007, oldschool, deadman, help, price, community, guide, items, monsters, quests, skills, database, tutorial, tips, hints, toolkit, video, pking" />
+<meta name="ROBOTS" content="ALL" />
+<meta property="fb:admins" content="511362465" />
+<meta property="og:site_name" content="2007RsHelp.com" />
+<meta property="og:image" content="http://2007rshelp.com/img/news/07rshelp.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="300" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+function initImage ( url ) {
+        img = $('.popUpImage');
+        img.attr('src', url).ready(function(){
+                img.show();
+        });
+}
+
+function killImage ( ) {
+        img = $('.popUpImage');
+        img.attr('src', "http://i.imgur.com/ulym44H.png");
+        $('.popUpImage').hide();
+}
+
+// on hover of link
+$('a').hover(function(e){
+                pic = $(this).text();   // get the value within the anchor tag (should be "Picture")
+                if (pic == "Picture"){
+                        $(this).attr('title', "");                      // remove title so nothing is blocking the image
+                        width = $(window).width();                      // get window width
+                        url = $(this).attr('href');                     // get the url of image
+                        initImage(url);                                         // show the image
+                        if (e.pageX+$('.popUpImage').outerWidth() > width){
+                                // if overflow will happen
+                                $('.popUpImage').offset({
+                                        top: e.pageY - $(this).outerHeight()+30,
+                                        left: e.pageX-$('.popUpImage').outerWidth()
+                                });
+                        }else{
+                                // do normal
+                                $('.popUpImage').offset({
+                                        top: e.pageY - $(this).outerHeight()+30,
+                                        left: e.pageX - ($(this).outerWidth()/2 -30)
+                                });
+                        }
+                }
+        },function(){
+                pic = $(this).text();
+                // make sure its a (Picture) tag
+                if (pic == "Picture"){
+                        killImage();    // hide the image
+                }
+        }
+);
+</script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=230568917119966";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="wrapper">
+<div class="topbar">
+<div style="float:left; width:250px; margin:7px 0 0 15px;">
+<table border="0">
+<tr><td class="theader">THEMES</td>
+<td style="border:none;"><a onclick="changeStyle('bluelight')" title="Default Theme"><img src="/images/banner/default.png" alt="Default" /></a>
+<a onclick="changeStyle('bluedark')" title="Black Blue"><img src="/images/banner/blkbl.png" alt="Black Blue" /></a>
+<a onclick="changeStyle('redlight')" title="Red Gray"><img src="/images/banner/gryrd.png" alt="Red Gray" /></a>
+<a onclick="changeStyle('reddark')" title="Red Black"><img src="/images/banner/blkrd.png" alt="Red Black" /></a>
+<a onclick="changeStyle('charcoal')" title="Charcoal"><img src="/images/banner/charc.png" alt="Charcoal" /></a>
+<a onclick="changeStyle('greenlight')" title="Dark Green"><img src="/images/banner/grygr.png" alt="Dark Green" /></a>
+<a onclick="changeStyle('olivedrab')" title="Olive Drab"><img src="/images/banner/olive.png" alt="Olive Drab" /></a></td></tr></table>
+</div>
+<div style="float: right; width: 100px; margin-top:5px;">
+<div class="fb-like" data-href="https://www.facebook.com/zybezrunescape" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+</div>
+</div>
+<div id="banner"><a href="/index.php" title="Old-School RuneScape Help"></a></div>
+
+<div style="position:absolute;right:5px;top:37px;width:728px;height:90px;z-index:10">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-0109004644664993" data-ad-slot="3891980502"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="bottombar">
+<table width="100%" border="0">
+<tr>
+<td width="66%" style="padding-bottom:1px;">
+
+</td>
+<td width="20%" style="text-align:right;">
+<form action="https://www.google.com" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-0109004644664993:3478413701" />
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="text" name="q" size="30" />
+<input type="submit" name="sa" value="Search" />
+</div>
+</form>
+</td>
+</tr>
+</table>
+</div>
+<div style="clear:both;"></div>
+<div id="body">
+<div id="sidebar">
+<div class="navigation">
+<h3>Old-School RuneScape Help</h3>
+<ul>
+<li><a href="/" title="2007 RuneScape Help"><img alt="" src="/images/banner/house.png" />OSRS Help</a></li>
+<li><a href="https://runescapecommunity.com/" title="Runescape Community discussion forums"><img alt="" src="/images/banner/user_comment.png" />RuneScape Community Forums</a></li>
+</ul>
+<h3>Guides</h3>
+<ul>
+<li><a href="/skills.php" title="Runescape Skill Guides for skills such as Farming, Crafting, Summoning and more"><img alt="" src="/images/banner/chart_bar.png" />Skill Guides</a></li>
+<li><a href="/quests.php" title="Runescape Quest Guides and detailed tips on how to complete them"><img alt="" src="/images/banner/quest.png" />Quest Guides</a></li>
+<li><a href="/cities.php" title="Runescape City Guides for major towns and areas"><img alt="" src="/images/banner/building.png" />City Guides</a></li>
+<li><a href="/guilds.php" title="Runescape Guild Guides for guilds such as Cooking Guild, Heros Guild and Champions Guild"><img alt="" src="/images/banner/shield.png" />Guild Guides</a></li>
+<li><a href="/minigames.php" title="Runescape Mini Game Guides and Tips"><img alt="" src="/images/banner/minigame.png" />Mini Game Guides</a></li>
+<li><a href="/misc.php?id=57" title="Runescape Treasure Trail Help"><img alt="" src="/images/banner/treasure.png" />Treasure Trail Help</a></li>
+<li><a href="/misc.php" title="Lots of interesting Runescape guides and tips"><img alt="" src="/images/banner/book_open.png" />Miscellaneous Guides</a></li>
+<li><a href="/dungeonmaps.php" title="Runescape Dungeon Maps"><img alt="" src="/images/banner/map2.png" />Dungeon Maps</a></li>
+<li><a href="/miningmaps.php" title="Runescape Mining Maps"><img alt="" src="/images/banner/hammer.png" />Mining Maps</a></li>
+</ul>
+<h3>Databases</h3>
+<ul>
+
+<li><a href="/items.php" title="Runescape Item Database"><img alt="" src="/images/banner/wand.png" />Items Database</a></li>
+<li><a href="/monsters.php" title="Runescape Monster Database"><img alt="" src="/images/banner/bug.png" />Monsters Database</a></li>
+<li><a href="/shops.php" title="Runescape Shop Database"><img alt="" src="/images/banner/basket.png" />Shops Database</a></li>
+<li><a href="/tomes.php" title="Runescape Tome or Book Database"><img alt="" src="/images/banner/book.png" />Tome/Books Database</a></li>
+</ul>
+<h3>Tools</h3>
+<ul>
+
+<li><a href="/calcs.php" title="Runescape Skill Calculators"><img alt="" src="/images/banner/calculator.png" />Skill Calculators</a></li>
+<li><a href="/locator.php" title="Runescape Co-ordinate Locator"><img alt="" src="/images/banner/map.png" />Coordinate Locator</a></li>
+</ul>
+<h3>Community</h3>
+<ul>
+<li><a href="https://runescapecommunity.com" title="Runescape Community forums"><img alt="" src="/images/banner/user_comment.png" />Runescape Community Forums</a></li>
+<li><a href="https://discordapp.com/invite/j3ffhGk" title="Zybez Discord"><img alt="" src="/images/banner/discord.png" />Discord</a></li>
+<li><a href="/misc.php?id=75" title="Zybez Runescape Clan Chat"><img alt="" src="/images/banner/zchat.png" />Zchat Clan Chat</a></li>
+</ul>
+</div>
+<div class="navigation">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-0109004644664993" data-ad-slot="2647397929"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="position: absolute; right: 1px; top: 36px; width:728px; height:100px;" id="zytopadvert">
+<script type="text/javascript">advert_top();</script>
+</div>
+
+
+<div style="text-align:center">
+<script type="text/javascript">advert_side();</script>
+</div>
+
+</div>
+<div id="content">
+<div class="boxtop">Runescape Monster Database</div><div class="boxbottom" style="padding-left: 24px; padding-top: 6px; padding-right: 24px;">
+<script type="text/javascript">function addEngine(name,ext,cat,type)
+<!--
+{
+    if ((typeof window.sidebar == "object") && (typeof window.sidebar.addSearchEngine == "function")) { 
+        window.sidebar.addSearchEngine(
+            "http://www.zybez.net/img/market/"+name+".src",
+            "http://www.zybez.net/img/market/"+name+"."+ext, name, cat
+        );
+    } else {
+        alert("Sorry, you need a Mozilla-based browser to install a search plugin.");
+    } 
+}
+//-->
+</script>
+<script type="text/javascript">
+/* JAVASCRIPT TABLE SORTING */
+
+$(document).ready(function() { 
+        //$("#monsterstable").tablesorter(); 
+    }); 
+
+</script>
+<div style="margin:1pt; font-size:large; font-weight:bold;">&raquo; <a href="/monsters.php">2007 RuneScape Monsters and NPC Database</a></div>
+<hr class="main" noshade="noshade" />
+<img src="img/news/mdb.gif" style="float:left;padding:10px 5px" alt="" />
+<p>This massive database contains tonnes of information and tips on Runescape's monsters and other NPCs (Non Playing Characters).</p>
+<p><b>&raquo;</b> Combat levels, HP and max hits<br /><b>&raquo;</b> Which quest a monster was created for<br /><b>&raquo;</b> Top drop and other drop lists<br /><b>&raquo;</b> Tactics and recommendations for training<br /><b>&raquo;</b> A javascript tool to calculate your approx. XP per hour<br /><b>&raquo;</b> ... and loads more!</p>
+<br />
+<div style="clear:both;"></div>
+<form action="/monsters.php" method="get"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td style="text-align:left;" width="200">Browsing 241 of 941 Monsters(s)</td>
+<td style="text-align:center;">
+Search <select name="search_area"><option value="name">Name</option><option value="locations">Locations</option><option value="drops">Drops</option><option value="attstyle">Attack Style</option><option value="quest">Quest</option><option value="race">Race</option><option value="notes">Notes</option></select> for
+<input type="text" name="search_term" value="81-781" maxlength="40" />
+<input type="submit" value="Go" /></td>
+<td style="text-align:right;" width="140">Page 7 of 10</td>
+</tr></table></form><br /><table width="96%" style="margin:0 2%;" cellspacing="0" cellpadding="5"><tr style="height:23px;font-size:13px;font-weight:bold;"><td style="vertical-align:middle">
+<a href="/monsters.php?search_area=training&amp;search_term=melee" title="Search for Monsters to Train Melee"><img src="/img/other/melee.gif" alt="" border="0" /></a> <a href="/monsters.php?search_area=training&amp;search_term=range" title="Search for Monsters to Train Ranged"><img src="/img/other/range.gif" alt="" border="0" /></a> <a href="/monsters.php?search_area=training&amp;search_term=mage" title="Search for Monsters to Train Magic"><img src="/img/other/magic.gif" alt="" border="0" /></a></td><td style="vertical-align:center;">Combat: <a href="/monsters.php?order=ASC&amp;category=combat&amp;page=1&amp;search_area=combat&amp;search_term=1-25">1 - 25</a> | <a href="/monsters.php?order=ASC&amp;category=combat&amp;page=1&amp;search_area=combat&amp;search_term=26-50">26 - 50</a> | <a href="/monsters.php?order=ASC&amp;category=combat&amp;page=1&amp;search_area=combat&amp;search_term=51-80">51 - 80</a> | <a href="/monsters.php?order=ASC&amp;category=combat&amp;page=1&amp;search_area=combat&amp;search_term=81-781">81+</a></td><td style="vertical-align:middle;text-align:right;"><td style="vertical-align:middle;text-align:right;"><a href="/correction.php?area=monster&amp;id=950">Submit Missing NPC</a></td></tr></table><br /><table style="margin:0 5%;border-left: 1px solid #000;" width="90%" cellpadding="4" cellspacing="0" id="monsterstable"><thead> <tr><th class="tabletop" width="150px">Picture</th><th class="tabletop">Name <a href="/monsters.php?order=ASC&amp;category=name&amp;page=7&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Name, Ascending"><img src="/img/up.GIF" width="9" height="9" alt="Sort by: Name, Ascending" border="0" /></a> <a href="/monsters.php?order=DESC&amp;category=name&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Name, Descending"><img src="/img/down.GIF" width="9" height="9" alt="Sort by: Name, Descending" border="0" /></a></th><th class="tabletop">Members <a href="/monsters.php?order=ASC&amp;category=member&amp;page=7&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Members, Ascending"><img src="/img/up.GIF" width="9" height="9" alt="Sort by: Members, Ascending" border="0" /></a> <a href="/monsters.php?order=DESC&amp;category=member&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Members, Descending"><img src="/img/down.GIF" width="9" height="9" alt="Sort by: Members, Descending" border="0" /></a></th><th class="tabletop">Combat <a href="/monsters.php?order=ASC&amp;category=combat&amp;page=7&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Combat, Ascending"><img src="/img/up.GIF" width="9" height="9" alt="Sort by: Combat, Ascending" border="0" /></a> <a href="/monsters.php?order=DESC&amp;category=combat&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Combat, Descending"><img src="/img/down.GIF" width="9" height="9" alt="Sort by: Combat, Descending" border="0" /></a></th><th class="tabletop">HP <a href="/monsters.php?order=ASC&amp;category=hp&amp;page=7&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Hitpoints, Ascending"><img src="/img/up.GIF" width="9" height="9" alt="Sort by: Quest, Ascending" border="0" /></a> <a href="/monsters.php?order=DESC&amp;category=hp&amp;search_area=combat&amp;search_term=81-781" title="Sort by: Hitpoints, Descending"><img src="/img/down.GIF" width="9" height="9" alt="Sort by: Quest, Descending" border="0" /></a></th><th class="tabletop" width="15%">Location</th>
+</tr></thead> <tr><td class="tablebottom" onclick="window.location='/monsters.php?id=960'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/sirgawain_1.gif') no-repeat 50% 50%;" title="Sir Gawain"></td><td class="tablebottom"><a href="/monsters.php?id=960">Sir Gawain</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">122</td><td class="tablebottom">1</td><td class="tablebottom">Knight Wave training Ground mini-quest.</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=574'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/icetroll_120.gif') no-repeat 50% 50%;" title="Ice Troll"></td><td class="tablebottom"><a href="/monsters.php?id=574">Ice Troll</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">123</td><td class="tablebottom">86</td><td class="tablebottom">Ice Plateau</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=575'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/abbysal demon.gif') no-repeat 50% 50%;" title="Abyssal demon"></td><td class="tablebottom"><a href="/monsters.php?id=575">Abyssal demon</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">124</td><td class="tablebottom">150</td><td class="tablebottom">Slayer Tower, north of Canifis; Fairy ring (ALR)</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=576'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/icetroll_120.gif') no-repeat 50% 50%;" title="Ice Troll"></td><td class="tablebottom"><a href="/monsters.php?id=576">Ice Troll</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">124</td><td class="tablebottom">86</td><td class="tablebottom">Ice Plateau</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=961'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/sirkay_1.gif') no-repeat 50% 50%;" title="Sir Kay"></td><td class="tablebottom"><a href="/monsters.php?id=961">Sir Kay</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">124</td><td class="tablebottom">1</td><td class="tablebottom">Knight Wave training Ground mini-quest.</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=577'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/arzinian avatar of magic.gif') no-repeat 50% 50%;" title="Arzinian Avatar of Magic"></td><td class="tablebottom"><a href="/monsters.php?id=577">Arzinian Avatar of Magic</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">125</td><td class="tablebottom">99</td><td class="tablebottom">Between the rock, Keldagrim</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=578'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/avatar.gif') no-repeat 50% 50%;" title="Arzinian Avatar of Ranging"></td><td class="tablebottom"><a href="/monsters.php?id=578">Arzinian Avatar of Ranging</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">125</td><td class="tablebottom">99</td><td class="tablebottom">Between the rock, Keldagrim</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=579'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/avatar.gif') no-repeat 50% 50%;" title="Arzinian Avatar of Strength"></td><td class="tablebottom"><a href="/monsters.php?id=579">Arzinian Avatar of Strength</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">125</td><td class="tablebottom">99</td><td class="tablebottom">Between the rock, Keldagrim</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=780'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/vyrewatch120.gif') no-repeat 50% 50%;" title="Vyrewatch"></td><td class="tablebottom"><a href="/monsters.php?id=780">Vyrewatch</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">125</td><td class="tablebottom">110</td><td class="tablebottom">Meiyerditch, Morytania</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=646'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/rocklob.gif') no-repeat 50% 50%;" title="Rock lobster"></td><td class="tablebottom"><a href="/monsters.php?id=646">Rock lobster</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">127</td><td class="tablebottom">150</td><td class="tablebottom">Waterbirth island dungeon</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=962'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/sirlancelot_1.gif') no-repeat 50% 50%;" title="Sir Lancelot"></td><td class="tablebottom"><a href="/monsters.php?id=962">Sir Lancelot</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">127</td><td class="tablebottom">1</td><td class="tablebottom">Knight Wave training Ground mini-quest.</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=1082"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=1082">Cave Kraken</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">127</td><td class="tablebottom">125</td><td class="tablebottom">Within the lakes of the Stronghold Slayer Cave</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=949'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/zombie_monkey129.gif') no-repeat 50% 50%;" title="Zombie monkey"></td><td class="tablebottom"><a href="/monsters.php?id=949">Zombie monkey</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">129</td><td class="tablebottom">90</td><td class="tablebottom">Zooknock's tunnel, Ape Atoll; Monkey Temple, Ape Atoll</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=880"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=880">Gelatinnoth mother</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">130</td><td class="tablebottom">275</td><td class="tablebottom">Culinaromancer Dimension</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=581'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/dragon_bronze.gif') no-repeat 50% 50%;" title="Bronze dragon"></td><td class="tablebottom"><a href="/monsters.php?id=581">Bronze dragon</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">131</td><td class="tablebottom">130</td><td class="tablebottom">Brimhaven dungeon, east of the Black demons</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=583'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/Ice_Wolf132.gif') no-repeat 50% 50%;" title="Ice wolf"></td><td class="tablebottom"><a href="/monsters.php?id=583">Ice wolf</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">132</td><td class="tablebottom">72</td><td class="tablebottom">God Wars dungeon and by Kamil, north of trollheim.</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=915"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=915">Skeleton warlord</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">132</td><td class="tablebottom">124</td><td class="tablebottom">Ancient Cavern</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=816'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/tzhaarxil133.gif') no-repeat 50% 50%;" title="TzHaar-Xil"></td><td class="tablebottom"><a href="/monsters.php?id=816">TzHaar-Xil</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">133</td><td class="tablebottom">120</td><td class="tablebottom">TzHaar City</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=883"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=883">Karamel</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">136</td><td class="tablebottom">1</td><td class="tablebottom">Culinaromancer Dimension</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=584'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/bouncer137.gif') no-repeat 50% 50%;" title="Bouncer"></td><td class="tablebottom"><a href="/monsters.php?id=584">Bouncer</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">137</td><td class="tablebottom">116</td><td class="tablebottom">Fight arena</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=651'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/giantrockcrab.gif') no-repeat 50% 50%;" title="Giant rock crab"></td><td class="tablebottom"><a href="/monsters.php?id=651">Giant rock crab</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">137</td><td class="tablebottom">240</td><td class="tablebottom">Waterbirth island dungeon</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=787'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/Animated_Rune_Armor138.gif') no-repeat 50% 50%;" title="Animated Rune armour"></td><td class="tablebottom"><a href="/monsters.php?id=787">Animated Rune armour</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">138</td><td class="tablebottom">118</td><td class="tablebottom">Warriors' Guild in Burthrope</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=887"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=887">Glod</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">138</td><td class="tablebottom">100</td><td class="tablebottom">Up the beanstalk</td></tr><tr><td class="tablebottom"><a href="/monsters.php?id=585"><img src="/img/npcimg/nopic.gif" alt="" border="0" /></a></td><td class="tablebottom"><a href="/monsters.php?id=585">Dessous</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">139</td><td class="tablebottom">1</td><td class="tablebottom">South of Canifis</td></tr><tr><td class="tablebottom" onclick="window.location='/monsters.php?id=861'" style="cursor:pointer;width:150px;height:150px;background:url('/img/npcimg/skeletalwyvern.gif') no-repeat 50% 50%;" title="Skeletal wyvern"></td><td class="tablebottom"><a href="/monsters.php?id=861">Skeletal wyvern</a></td>
+<td class="tablebottom">Yes</td><td class="tablebottom">140</td><td class="tablebottom">204</td><td class="tablebottom">Dungeon south of Port Sarim</td></tr></table><br /><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="left"><form action="/monsters.php" method="get">Jump to page <input type="text" name="page" size="3" maxlength="3" /><input type="hidden" name="order" value="ASC" /><input type="hidden" name="category" value="combat" /><input type="hidden" name="search_area" value="combat" /><input type="hidden" name="search_term" value="81-781" /> <input type="submit" value="Go" /></form></td><td align="right"><a href="/monsters.php?page=1&amp;order=ASC&amp;category=combat&amp;search_area=combat&amp;search_term=81-781">&laquo; First</a> <a href="/monsters.php?page=6&amp;order=ASC&amp;category=combat&amp;search_area=combat&amp;search_term=81-781">< Previous</a> | <a href="/monsters.php?page=8&amp;order=ASC&amp;category=combat&amp;search_area=combat&amp;search_term=81-781">Next ></a> <a href="/monsters.php?page=10&amp;order=ASC&amp;category=combat&amp;search_area=combat&amp;search_term=81-781">Last &raquo;</a> </td></tr><tr><td colspan="2" align="right" width="140">Page 7 of 10</td></tr></table>
+<p style="text-align:center; margin-bottom:2em;font-weight:bold;font-size:1.5em;">
+<img src="/img/news/handsandattack.png" />
+Stuck on something? Want some more tips? <a href="https://runescapecommunity.com">Ask on our forums.</a>
+<img src="/img/news/gobbow.png" />
+</p>
+</div>
+
+<div style="clear:both;"></div>
+<p style="text-align:center;">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0109004644664993" data-ad-slot="3708680501" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</p>
+</div>
+</div>
+<br style="clear: both" />
+<br />
+<div id="footer">
+<div id="copyright">
+
+<span title="Please dont copy anything from this website without permission">&copy;</span> since 2001 -
+<a href="https://runescapecommunity.com/forumdisplay.php?fid=15" title="Contact us on our forums">Contact</a>
+</div>
+</div>
+
+</div>
+<img class="popUpImage" style="display:none;" src="https://i.imgur.com/ulym44H.png" alt="RuneScape Help's Screenshot" />
+<script type="text/javascript" src="/imageautotooltip.js"></script>
+<script src="https://www.google.com/cse/api/partner-pub-0109004644664993/cse/3478413701/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-239988-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-239988-18');
+</script>
+<img class="popUpImage" style="display:none;" src="https://i.imgur.com/ulym44H.png" alt="RuneScape
+Help's Screenshot" />
+</body>
+</html>
