@@ -2,12 +2,12 @@ import csv
 import json
 import os
 import random
-import sqlite3
 import re
-import time
-import urllib2
-import requests
 import shutil
+import sqlite3
+import time
+
+import requests
 
 
 def save_json(input):
@@ -21,13 +21,63 @@ def create_db_structure(conn):
 
     create_sql = '''
 CREATE TABLE item (
-	id integer PRIMARY KEY AUTOINCREMENT,
-	name string,
-	normal_name string
+  id integer PRIMARY KEY AUTOINCREMENT,
+  name string,
+  normal_name string,
+  image string,
+  members boolean,
+  tradable boolean,
+  equipable boolean,
+  stackable boolean,
+  weight float,
+  quest boolean,
+  examine string,
+  high_alch integer,
+  low_alch integer
 );
     '''
     c.execute(create_sql)
-    create_index_sql = "CREATE INDEX normal_name_idx ON item(normal_name);"
+    create_sql = '''
+CREATE TABLE monster (
+	id integer PRIMARY KEY AUTOINCREMENT,
+	name string,
+	normal_name string,
+	combat_level integer,
+	hp integer,
+	max_hit integer,
+	race string,
+	members boolean,
+	quest boolean,
+	nature string,
+	attack_style string,
+	examine string,
+	locations string,
+	tactic string,
+	notes string,
+	drops string,
+	top_drops string
+);
+    '''
+    c.execute(create_sql)
+    create_sql = '''
+CREATE TABLE loot (
+	id integer PRIMARY KEY AUTOINCREMENT,
+	item_id integer,
+	monster_id integer,
+	rarity_id integer
+);
+    '''
+    c.execute(create_sql)
+    create_sql = '''
+CREATE TABLE loot_rarity (
+	id integer PRIMARY KEY AUTOINCREMENT,
+	name string
+);
+    '''
+    c.execute(create_sql)
+    create_index_sql = "CREATE INDEX item_normal_name_idx ON item(normal_name);"
+    c.execute(create_index_sql)
+    create_index_sql = "CREATE INDEX monster_normal_name_idx ON monster(normal_name);"
     c.execute(create_index_sql)
     conn.commit()
 
@@ -68,6 +118,7 @@ def parse_item_list():
     print 'processed {line_count} lines.'.format(line_count=len(output))
     return output
 
+@DeprecationWarning
 def fetch_zybez(conn):
     print "started crawling zybez"
     c = conn.cursor()
@@ -108,9 +159,10 @@ def crawl_sublimism():
 
 data = parse_item_list()
 
-crawl_sublimism()
+# crawl_sublimism()
 
-# conn = sqlite3.connect('rsparser.db')
-# create_db_structure(conn)
-# save_db(data, conn)
+conn = sqlite3.connect('rsparser.db')
+create_db_structure(conn)
+save_db(data, conn)
 #fetch_zybez(conn)
+conn.close()
